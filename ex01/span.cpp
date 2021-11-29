@@ -6,7 +6,7 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 15:49:25 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/22 16:23:12 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/29 15:55:12 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ unsigned int	Span::longestSpan(void)
 
 	if (this->count <= 1)
 		throw Span::NoPossibleSpan();
-	for (int i = 0; i < this->maxnum - 1; i++)
+	for (unsigned int i = 0; i < this->maxnum - 1; i++)
 	{
 		diff = abs(this->arr[i] - this->arr[i + 1]);
 		if (diff > ret)
