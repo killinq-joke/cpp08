@@ -6,25 +6,11 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 21:16:41 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/11/22 15:47:31 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/30 18:39:24 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "easyfind.hpp"
-
-template <typename T>
-int easyfind(T arr, int occ)
-{
-	int	ret = 0;
-
-	for (auto i = arr.begin(); i != arr.end(); i++)
-	{
-		if (*i == occ)
-			return (ret);
-		ret++;
-	}
-    return (-1);
-}
 
 int main(void)
 {
@@ -34,6 +20,8 @@ int main(void)
 	std::vector<int> arr2;
 	std::deque<int> arr3;
 	int	occ = 0;
+	int	occ1 = 2;
+	int	occ2 = 1;
 
 	for (int i = 0; i < arrsize; i++)
 	{
@@ -42,7 +30,7 @@ int main(void)
 		arr3.push_back(a[i]);
 	}
 	std::cout << "first occurence of: " << occ << " is index: " << easyfind(arr1, occ) << std::endl;
-	std::cout << "first occurence of: " << occ << " is index: " << easyfind(arr2, occ) << std::endl;
-	std::cout << "first occurence of: " << occ << " is index: " << easyfind(arr3, occ) << std::endl;
+	std::cout << "first occurence of: " << occ1 << " is index: " << easyfind(arr2, occ1) << std::endl;
+	std::cout << "first occurence of: " << occ2 << " is index: " << easyfind(arr3, occ2) << std::endl;
     return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 21:19:29 by mout              #+#    #+#             */
-/*   Updated: 2021/11/22 15:44:31 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/11/30 18:14:31 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,17 @@
 # include <deque>
 
 template <typename T>
-int	easyfind(T arr, int occ);
+int easyfind(T & arr, int occ)
+{
+	int	ret = 0;
+
+	for (typename T::iterator i = arr.begin(); i != arr.end(); i++)
+	{
+		if (*i == occ)
+			return (ret);
+		ret++;
+	}
+    return (-1);
+}
 
 #endif
